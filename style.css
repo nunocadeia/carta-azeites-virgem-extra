@@ -1,0 +1,290 @@
+:root {
+    --brown: #736F4E;
+}
+
+html,
+body,
+.grid {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background: url("./assets/images/mosaico.jpg");
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-rows: 30% auto 15%;
+    grid-template-areas:
+        "h h h"
+        "l m r"
+        "f f f";
+    column-gap: 2rem;
+    width: 1140px;
+    margin: 0 auto;
+}
+
+/* .left,
+.right {
+    background-color: rgba(0, 0, 255, 20%);
+}
+.header {
+    background-color: rgba(255, 255, 0, 20%);
+}
+.footer {
+    background-color: rgba(255, 0, 0, 20%);
+} */
+
+.header {
+    grid-area: h;
+    place-self: end center;
+}
+
+.left {
+    grid-area: l;
+}
+
+.middle {
+    grid-area: m;
+    justify-self: center;
+    padding: 2rem 0;
+}
+
+.right {
+    grid-area: r;
+}
+
+.footer {
+    grid-area: f;
+    place-self: end center;
+    padding-bottom: 3rem;
+}
+
+.sensory-profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "sp-h sp-h"
+        "sp-l sp-r";
+    column-gap: 1rem;
+}
+
+/* .sensory-profile-header {
+    background-color: rgba(255, 255, 0, 20%);
+}
+.sensory-profile-left,
+.sensory-profile-right {
+    background-color: rgba(0, 0, 255, 20%);
+} */
+
+.sensory-profile-header {
+    grid-area: sp-h;
+}
+
+.sensory-profile-left {
+    grid-area: sp-l;
+}
+
+.sensory-profile-right {
+    grid-area: sp-r;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "l-cap l-con"
+        "l-cap l-con";
+    column-gap: 1rem;
+}
+
+.legend-caption {
+    grid-area: l-cap;
+    place-self: center center;
+}
+
+.legend-content {
+    grid-area: l-con;
+}
+
+.left > article:not(:first-of-type),
+.right > article:not(:first-of-type) {
+    margin-top: 4rem;
+}
+
+.right > article:first-of-type {
+    margin-top: 12rem;
+}
+
+h4 {
+    margin-top: 2.66em; /* 2 */
+}
+
+p {
+    margin: 0;
+}
+
+.sensory-profile-grid p {
+    margin: 0 0 0.3rem;
+}
+
+.sensory-profile-left > div:not(:first-of-type),
+.sensory-profile-right > div:not(:first-of-type) {
+    margin: 1rem 0;
+}
+
+aside {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    background-color: var(--brown);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.closed {
+    right: calc(-200px - 1rem);
+}
+
+aside h1,
+aside li {
+    color: white;
+}
+
+aside h1 {
+    transform: rotate(-90deg);
+}
+
+h1,
+h4,
+p,
+article li,
+article i,
+a:link,
+a:visited  {
+    color: var(--brown);
+}
+
+a:hover,
+a:active {
+    background-color: var(--brown);
+    color: white;
+}
+
+article > h1 {
+    font-size: 2em; /* overwrite user agent rule */
+}
+
+article > h1,
+article > h4 {
+    font-style: italic;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+.divider {
+    height: 100%;
+    border-left: 0.1em dotted var(--brown);
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    margin-top: 2.66em;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Frank Ruhl Libre";
+    src: url("./assets/fonts/FrankRuhlLibre-Medium.ttf") format("tff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rubik Light";
+    src: url("./assets/fonts/Rubik-Light.ttf") format("tff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "carta_esht";
+    src: url("./assets/fonts/carta_esht.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+h4 {
+    font-family: "Frank Ruhl Libre";
+    font-weight: 500;
+}
+
+p,
+li {
+    font-family: "Rubik Light";
+}
+
+[class^="carta-esht-"]:before,
+[class*=" carta-esht-"]:before {
+    font-family: "carta_esht";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .4em;
+    text-align: center;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    font-size: 120%;
+
+    /* Font smoothing */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="carta-esht-azeitona"]:before,
+[class*=" carta-esht-azeitona"]:before {
+    margin-right: 0;
+    font-size: 150%;
+}
+
+.carta-esht-altitude:before { content: "\e800"; }
+.carta-esht-azeitona-cheia:before { content: "\e801"; }
+.carta-esht-azeitona-metade:before { content: "\e802"; }
+.carta-esht-azeitona-vazia:before { content: "\e803"; }
+.carta-esht-cultivares:before { content: "\e804"; }
+.carta-esht-dop:before { content: "\e805"; }
+.carta-esht-extracao:before { content: "\e806"; }
+.carta-esht-lote:before { content: "\e807"; }
+.carta-esht-modo-producao:before { content: "\e808"; }
+.carta-esht-plantacao:before { content: "\e809"; }
+.carta-esht-regiao:before { content: "\e80a"; }
+.carta-esht-solo:before { content: "\e80b"; }
