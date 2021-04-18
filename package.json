@@ -1,0 +1,22 @@
+{
+  "name": "carta-azeites-virgem-extra",
+  "version": "1.0.0",
+  "description": "Carta digital de Azeites Virgem Extra do Restaurante da ESHT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nunocadeia/carta-esht.git"
+  },
+  "author": "Nuno Cadeia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nunocadeia/carta-esht/issues"
+  },
+  "homepage": "https://github.com/nunocadeia/carta-esht#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
