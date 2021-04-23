@@ -209,8 +209,8 @@ a:visited  {
 
 @font-face {
     font-family: "Source Serif Pro";
-    src: url("./assets/fonts/SourceSerifPro-BoldItalic.ttf") format("tff");
-    font-weight: 700;
+    src: url("./assets/fonts/SourceSerifPro-Italic.ttf") format("tff");
+    font-weight: 400;
     font-style: italic;
 }
 
@@ -230,16 +230,18 @@ a:visited  {
 
 article > h1 {
     font-size: 2em; /* overwrite user agent rule */
+    font-weight: 700;
 }
 
 article > h2 {
+    font-size: 1.3em;
     font-style: italic;
+    font-weight: 400;
 }
 
 h1,
 h2 {
     font-family: "Source Serif Pro", serif;
-    font-weight: 700;
 }
 
 p,
