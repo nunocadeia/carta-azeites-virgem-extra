@@ -1,5 +1,5 @@
 :root {
-    --brown: #736F4E;
+    --gold-fusion: #736F4E;
 }
 
 html,
@@ -120,12 +120,22 @@ body {
     margin-top: 12rem;
 }
 
-h4 {
+h3 {
     margin-top: 2.66em; /* 2 */
 }
 
 p {
     margin: 0;
+    line-height: 1.5;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 0 0 0.5rem;
 }
 
 .sensory-profile-grid p {
@@ -141,7 +151,7 @@ aside {
     position: fixed;
     top: 10%;
     right: 0;
-    background-color: var(--brown);
+    background-color: var(--gold-fusion);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     cursor: pointer;
@@ -161,42 +171,18 @@ aside h1 {
 }
 
 h1,
-h4,
+h3,
 p,
 article li,
 article i,
 a:link,
 a:visited  {
-    color: var(--brown);
-}
-
-a:hover,
-a:active {
-    background-color: var(--brown);
-    color: white;
-}
-
-article > h1 {
-    font-size: 2em; /* overwrite user agent rule */
-}
-
-article > h1,
-article > h4 {
-    font-style: italic;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-li {
-    margin: 0.5rem 0;
+    color: var(--gold-fusion);
 }
 
 .divider {
     height: 100%;
-    border-left: 0.1em dotted var(--brown);
+    border-left: 0.1em dotted var(--gold-fusion);
 }
 
 .videoWrapper {
@@ -215,10 +201,17 @@ li {
 }
 
 @font-face {
-    font-family: "Frank Ruhl Libre";
-    src: url("./assets/fonts/FrankRuhlLibre-Medium.ttf") format("tff");
-    font-weight: 500;
+    font-family: "Source Serif Pro";
+    src: url("./assets/fonts/SourceSerifPro-Bold.ttf") format("tff");
+    font-weight: 700;
     font-style: normal;
+}
+
+@font-face {
+    font-family: "Source Serif Pro";
+    src: url("./assets/fonts/SourceSerifPro-BoldItalic.ttf") format("tff");
+    font-weight: 700;
+    font-style: italic;
 }
 
 @font-face {
@@ -235,15 +228,24 @@ li {
     font-style: normal;
 }
 
+article > h1 {
+    font-size: 2em; /* overwrite user agent rule */
+}
+
+article > h3 {
+    font-style: italic;
+}
+
 h1,
-h4 {
-    font-family: "Frank Ruhl Libre";
-    font-weight: 500;
+h3 {
+    font-family: "Source Serif Pro", serif;
+    font-weight: 700;
 }
 
 p,
 li {
-    font-family: "Rubik Light";
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
 }
 
 [class^="carta-esht-"]:before,
