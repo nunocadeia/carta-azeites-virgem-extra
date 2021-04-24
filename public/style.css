@@ -19,6 +19,7 @@ body,
 }
 
 body {
+    font-size: 14px;
     margin: 0;
     background: url("./assets/images/mosaico_x320.jpg");
 }
@@ -268,6 +269,10 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
     .main-grid,
     .footer > p {
         width: calc(100vw - var(--tablet-margin));
